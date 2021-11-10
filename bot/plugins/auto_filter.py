@@ -224,7 +224,7 @@ async def auto_filter(bot, update):
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= "https://telegra.ph/file/4af8709f22d7c752fa63b.jpg",
-                caption=f"<b>🎬 Title</b>: <a href={imdb['url']}>{imdb.get('title')}</a>\n<b>🎭 Genres</b>: {imdb.get('genres')}\n<b>📆 𝖱𝖾𝗅𝖾𝖺𝗌𝖾</b>: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n<b>🌟 Rating</b>: (<a href={imdb['url']}/ratings>{imdb.get('rating')}</a> /10) \n<b>🗳️ Votes</b>: {imdb.get('votes')}</a>\n<b>🌏 Country</b>: {imdb.get('country')}\n<b>🗣️ Request</b>: {message.from_user.mention}\n<b>🔰 Language</b>: <a href={imdb['url']}/lang>{imdb.get('lang')}</a>\n<b>🧭 Runtime</b>: <a href={imdb['url']}/runtime>{imdb.get('runtime')}</a> min\n<b>🔥Cast: <a href={imdb['url']}>{imdb.get('actors')}\n🎥 𝖣𝗂𝗋𝖾𝖼𝗍𝗈𝗋𝗌 : <b>{movie_info['director']}</b>\n📝 𝖶𝗋𝗂𝗍𝖾𝗋𝗌 : <b>{movie_info['writer']}</b>\n🔆 𝖲𝗍𝖺𝗋𝗌 : <b>{movie_info['actors']}</b>\n<b>🎤 Plot</b>: <code>{imdb.get('plot')} </code>",                reply_markup=reply_markup,
+                caption=f"Results {query}",
                 parse_mode="html",
                 reply_to_message_id=update.message_id
             )
