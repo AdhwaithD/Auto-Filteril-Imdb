@@ -205,8 +205,8 @@ async def auto_filter(bot, update):
             ia = imdb.IMDb()
             my_movie=query
             movies = ia.search_movie(my_movie)
-            #print(f"{movies[0].movieID} {movies[0]['title']}")
-            movie_url = movies[0].get_fullsizeURL()
+            #print(f"{movies[0]movieID} {movies[0]['title']}")
+            movie_url = movies[0]getfullsizeURL()
 
             await bot.send_photo(
                 photo=movie_url,
